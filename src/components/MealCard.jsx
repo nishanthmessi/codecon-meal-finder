@@ -8,7 +8,10 @@ const MealCard = ({ meals }) => {
       ) : (
         <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-8'>
           {meals.map((meal) => (
-            <div className='flex flex-col gap-2 border shadow-md rounded-md p-2'>
+            <div
+              key={meal.idMeal}
+              className='flex flex-col gap-2 border shadow-md rounded-md p-2'
+            >
               <img
                 src={meal.strMealThumb}
                 alt='meal-img'
